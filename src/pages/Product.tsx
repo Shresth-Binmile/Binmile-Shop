@@ -1,7 +1,9 @@
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import CircularProgress from '@mui/material/CircularProgress'
+import Container from '@mui/material/Container'
 import CommonCardDataDisplay from '../components/CommonCardDataDisplay'
-import { Button, Container } from '@mui/material'
 import { useNavigate } from "react-router-dom"
 import { ApiHandler } from '../utils/ApiHandler'
 import { useEffect, useState } from 'react'
@@ -31,7 +33,11 @@ const Product = () => {
   }, [])
 
   const navigate = useNavigate()
-  return loading ? (<>Loading...</>) : (
+  return loading ? (
+    <Box sx={{position: 'absolute', display: 'flex', alignContent: 'center', justifyContent: 'center', top: '50%', left: '50%'}}>
+      <CircularProgress />
+    </Box>
+  ) : (
     <>
       <productItems.Provider value={products}>
         <Container >

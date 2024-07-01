@@ -1,4 +1,7 @@
-import { Box, Button, Container, Typography } from "@mui/material"
+import Box from '@mui/material/Box'
+import Typography from '@mui/material/Typography'
+import Button from '@mui/material/Button'
+import Container from '@mui/material/Container'
 import CommonCardDataDisplay from "../components/CommonCardDataDisplay"
 import { useNavigate } from "react-router-dom"
 import { clearCart } from "../utils/ClearCartHandler"
